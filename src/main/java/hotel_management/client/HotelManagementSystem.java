@@ -18,6 +18,13 @@ public class HotelManagementSystem {
     }
 
     public double bookStay(int nights) {
+
+        if (nights <= 0) {
+            throw new IllegalArgumentException(
+                    "Number of nights must be greater than 0"
+            );
+        }
+
         room.prepareRoom();
 
         double price =
