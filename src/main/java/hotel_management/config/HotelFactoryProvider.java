@@ -4,6 +4,7 @@ import hotel_management.factory.abstractfactory.BusinessHotelFactory;
 import hotel_management.factory.abstractfactory.EconomyHotelFactory;
 import hotel_management.factory.abstractfactory.HotelFactory;
 import hotel_management.factory.abstractfactory.LuxuryHotelFactory;
+import hotel_management.factory.abstractfactory.ResortHotelFactory;
 
 public class HotelFactoryProvider {
 
@@ -18,6 +19,9 @@ public class HotelFactoryProvider {
 
             case "luxury" ->
                     new LuxuryHotelFactory();
+
+            case "resort" ->
+                    new ResortHotelFactory();
 
             default ->
                     throw new IllegalArgumentException(
